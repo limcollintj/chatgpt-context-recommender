@@ -2,11 +2,10 @@
   "name": "chatgpt-recommender",
   "version": "1.0.0",
   "description": "System that provides reccomendations based on text information",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "node ./src/index.js"
+    "start": "npx build && node ./dist/index.js"
   },
   "author": "Collin Lim",
   "license": "ISC",
@@ -18,3 +17,4 @@
     "typescript": "^5.1.6"
   }
 }
+ 

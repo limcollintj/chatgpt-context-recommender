@@ -5,7 +5,9 @@ class ChatGptApi {
         this.chatGptApiKey = chatGptApiKey;
     }
     predict(request) {
-        return {};
+        return {
+        // TODO: Return some response. Call the API required
+        };
     }
 }
 exports.default = ChatGptApi;
