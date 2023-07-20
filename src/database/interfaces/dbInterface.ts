@@ -8,5 +8,5 @@ interface DBRequest {
 }
 
 interface DBIterface {
-    getContext: (request: DBRequest) => DBResponse  
+    getContext: (request: DBRequest) => Promise<DBResponse>  
 }
