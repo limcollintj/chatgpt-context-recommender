@@ -1,9 +1,16 @@
 import { Configuration, OpenAIApi } from "openai";
+import {
+    ApiConfig,
+    EmbeddingRequest, EmbeddingResponse,
+    PredictionApi,
+    PredictionApiRequest,
+    PredictionApiResponse
+} from "../interfaces/PredictionApi.js";
 
 class ChatGptApi implements PredictionApi {
     config : ApiConfig
     openAi : OpenAIApi
-    
+
     constructor(config : ApiConfig) {
         const configuration = new Configuration({
             apiKey: config.apiKey
@@ -19,7 +26,7 @@ class ChatGptApi implements PredictionApi {
             temperature: this.config.temperature,
             max_tokens: 100
             });
-        const responseText = completion.data.choices[0].text    
+        const responseText = completion.data.choices[0].text
         const response : PredictionApiResponse = {
             result: responseText,
             tokensUsed: completion.data.usage?.completion_tokens

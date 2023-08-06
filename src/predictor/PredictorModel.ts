@@ -1,4 +1,6 @@
 import ConfigModel from "../config/ConfigModel.js"
+import {PredictionApi, PredictionApiRequest} from "../api/interfaces/PredictionApi.js";
+import {DBIterface} from "../database/interfaces/dbInterface.js";
 
 class PredictorModel {
     config: ConfigModel

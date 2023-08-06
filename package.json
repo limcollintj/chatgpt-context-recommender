@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "System that provides reccomendations based on text information",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "test",
     "start": "npx tsc && dotenv -e ./local.env node ./dist/index.js"
@@ -13,7 +14,7 @@
     "@dqbd/tiktoken": "^1.0.7",
     "chromadb": "^1.5.4",
     "express": "^4.18.2",
-    "langchain": "^0.0.110",
+    "langchain": "0.0.110",
     "openai": "^3.3.0",
     "pdf-parse": "^1.1.1"
   },

@@ -1,5 +1,5 @@
 import fs from 'fs'
-
+import {DBIterface, DBRequest, DBResponse} from "../interfaces/dbInterface.js";
 /**
  * Retrieves the context from the local repository
  */

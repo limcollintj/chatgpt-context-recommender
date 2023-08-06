@@ -1,31 +1,31 @@
-interface PredictionApiRequest {
+export interface PredictionApiRequest {
     prompt: string
 }
 
-interface EmbeddingRequest {
+export interface EmbeddingRequest {
     context: string
 }
-interface EmbeddingResponse {
+export interface EmbeddingResponse {
     embedding: Array<Number>
 }
 
 
-interface PredictionApiResponse {
+export interface PredictionApiResponse {
     result: string | undefined
     tokensUsed: number | undefined
 }
 
-enum ChatGptModel {
+export enum ChatGptModel {
     davinci = "text-davinci-003"
 }
 
-interface ApiConfig {
+export interface ApiConfig {
     apiKey: string
     temperature: number
     model: ChatGptModel
 }
 
-interface PredictionApi {
+export interface PredictionApi {
     predict : (request: PredictionApiRequest) => Promise<PredictionApiResponse>
     generateEmbeddings: (request : EmbeddingRequest) => Promise<EmbeddingResponse>
 }

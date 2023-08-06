@@ -1,12 +1,12 @@
-interface DBResponse {
+export interface DBResponse {
     context: string,
     numTokens: number
 }
 
-interface DBRequest {
-    
+export interface DBRequest {
+
 }
 
-interface DBIterface {
-    getContext: (request: DBRequest) => Promise<DBResponse>  
+export interface DBIterface {
+    getContext: (request: DBRequest) => Promise<DBResponse>
 }

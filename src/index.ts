@@ -1,4 +1,4 @@
-import initServer from './server'
+import initServer from './server.js'
 import express from 'express'
 const app = express()
 
